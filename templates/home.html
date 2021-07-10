@@ -3,12 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<title>Gulasal</title>
+	<style type="text/css">
+		span {
+			text-align: right;
+		}
+	</style>
 </head>
 <body>
 	<h1>Gulasalning sayti</h1>
 	<ul>
 		{% for post in object_list %}
-			<li><h2>{{ post.title }}</h2><br>{{ post.text }}</li><br>
+			<li> <h2>{{ post.title }}</h2> <br> <p>{{ post.text }}</p> <br> <span>{{ post.author }}</span></li><br>
 		{% endfor %}
 	</ul>
 </body>
